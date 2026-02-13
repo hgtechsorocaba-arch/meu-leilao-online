@@ -5,34 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leilões Reversa - Sorocaba</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #0056b3; color: white; text-align: center; padding: 30px; }
-        .container { padding: 20px; max-width: 800px; margin: auto; background: white; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .contato { background: #333; color: white; padding: 20px; text-align: center; margin-top: 40px; }
-        .btn-whatsapp { background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 10px; }
+        /* Cores baseadas no seu logo */
+        :root {
+            --azul-escuro: #1a3a5a;
+            --azul-claro: #3a7ebf;
+            --cinza: #f4f4f4;
+            --branco: #ffffff;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--cinza); color: #333; }
+        
+        /* Topo do Site */
+        header { background: var(--branco); padding: 20px; text-align: center; border-bottom: 4px solid var(--azul-escuro); }
+        .logo { max-width: 250px; height: auto; }
+        
+        .hero { background: var(--azul-escuro); color: white; padding: 40px 20px; text-align: center; }
+        
+        /* Container dos Lotes */
+        .container { padding: 20px; max-width: 1000px; margin: auto; }
+        
+        .grid-lotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        
+        .card-lote { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card-lote:hover { transform: translateY(-5px); }
+        .card-lote img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+        .card-info { padding: 15px; }
+        .card-info h3 { margin: 0 0 10px 0; color: var(--azul-escuro); }
+        .preco { font-size: 1.2em; color: #27ae60; font-weight: bold; margin: 10px 0; }
+        
+        .btn-lance { background: var(--azul-claro); color: white; padding: 10px; text-decoration: none; border-radius: 5px; display: block; text-align: center; font-weight: bold; }
+        
+        /* Rodapé */
+        footer { background: #222; color: white; padding: 40px 20px; text-align: center; margin-top: 50px; }
+        .btn-whatsapp { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin: 20px 0; font-size: 1.1em; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Leilões Reversa</h1>
-        <p>Lotes de Mercadoria Reversa Mercado Livre</p>
+        <!-- Aqui chamamos o seu logo pelo nome exato que está no GitHub -->
+        <img src="logo reversa sem fundo.png" alt="Leilões Reversa" class="logo">
     </header>
 
-    <div class="container">
-        <h2>Bem-vindo!</h2>
-        <p>Somos especialistas em leilões de lotes de logística reversa em Sorocaba e região.</p>
-        <p><strong>O que leiloamos:</strong> Ventiladores, Celulares, Livros, Perfumes, Panelas e muito mais!</p>
-        <p>Nosso site oficial está em construção, mas você já pode entrar em contato conosco pelo WhatsApp abaixo.</p>
-        
-        <a href="https://wa.me/5515996480072" class="btn-whatsapp">Falar no WhatsApp (15) 99648-0072</a>
+    <div class="hero">
+        <h1>Leilões de Logística Reversa</h1>
+        <p>Oportunidades exclusivas em Sorocaba e Região</p>
     </div>
 
-    <div class="contato">
-        <h3>Informações de Contato</h3>
-        <p>E-mail: contato@leiloesreversa.com.br</p>
-        <p>Endereço: Rua João José de Almeida, 431 - Sorocaba/SP</p>
+    <div class="container">
+        <h2 style="text-align: center; color: var(--azul-escuro);">Lotes em Destaque</h2>
+        
+        <div class="grid-lotes">
+            <!-- Lote 1 -->
+            <div class="card-lote">
+                <img src="https://images.unsplash.com/photo-1591115765373-520b7a217144?w=500" alt="Ventiladores">
+                <div class="card-info">
+                    <h3>Lote 01 - Mix de Ventiladores</h3>
+                    <p>Aproximadamente 15 unidades - Diversas marcas.</p>
+                    <div class="preco">Lance Inicial: R$ 450,00</div>
+                    <a href="https://wa.me/5515996480072" class="btn-lance">Dar Lance via WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Lote 2 -->
+            <div class="card-lote">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Celulares">
+                <div class="card-info">
+                    <h3>Lote 02 - Smartphones Reversa</h3>
+                    <p>05 unidades para revisão ou retirada de peças.</p>
+                    <div class="preco">Lance Inicial: R$ 1.200,00</div>
+                    <a href="https://wa.me/5515996480072" class="btn-lance">Dar Lance via WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Lote 3 -->
+            <div class="card-lote">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=500" alt="Panelas">
+                <div class="card-info">
+                    <h3>Lote 03 - Jogos de Panelas</h3>
+                    <p>Lote com 08 jogos completos - Devoluções ML.</p>
+                    <div class="preco">Lance Inicial: R$ 600,00</div>
+                    <a href="https://wa.me/5515996480072" class="btn-lance">Dar Lance via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://wa.me/5515996480072" class="btn-whatsapp">Clique aqui para receber a lista completa no WhatsApp</a>
+        </div>
     </div>
+
+    <footer>
+        <h3>Leilões Reversa - Sorocaba/SP</h3>
+        <p>Rua João José de Almeida, 431</p>
+        <p>E-mail: contato@leiloesreversa.com.br</p>
+        <p>© 2026 Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
